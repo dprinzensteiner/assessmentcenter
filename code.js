@@ -6,6 +6,9 @@ function generate() {
         let amount = getRandomIntegerInRange(1, 9);
         if (direction == "up" && down - amount < 0) {
             continue;
+        } 
+        if(direction == "down") {
+            down += amount;
         }
         lines.push(direction + " " + amount);
     }
