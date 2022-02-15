@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 function generate() {
     let lines = [];
     let down = 0;
@@ -47,3 +45,30 @@ let participants = [
 }) */
 
 //console.log(lines, lines.join('\n'));
+
+document.querySelector('#angaben')
+
+participants.forEach((surname) => {
+    let parent = document.querySelector('#angaben');
+
+    let el = `
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        assignments/${surname}.txt
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <a href="assignments/${surname}.txt" target='_blank'>assignments/${surname}.txt</a>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon-${surname}">@</span>
+            <input type="text" class="form-control" placeholder="abgabe" aria-label="abgabe" aria-describedby="basic-addon-${surname}">
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+
+});
