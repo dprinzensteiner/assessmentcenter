@@ -140,7 +140,7 @@ participants.forEach((surname) => {
     <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-${surname}" aria-expanded="false" aria-controls="flush-collapse-${surname}">
-        assignments/${surname}.txt
+        assignments/${surname}
       </button>
     </h2>
     <div id="flush-collapse-${surname}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
