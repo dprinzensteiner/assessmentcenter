@@ -51,6 +51,8 @@ document.querySelector('#angaben')
 participants.forEach((surname) => {
     let parent = document.querySelector('#angaben');
 
+    let ele = document.createElement('div')
+
     let el = `
     <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
@@ -64,11 +66,15 @@ participants.forEach((surname) => {
 
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon-${surname}">@</span>
-            <input type="text" class="form-control" placeholder="abgabe" aria-label="abgabe" aria-describedby="basic-addon-${surname}">
+            <input type="text" class="form-control" id='abgabe-${surname}' placeholder="abgabe" aria-label="abgabe" aria-describedby="basic-addon-${surname}">
         </div>
       </div>
     </div>
   </div>
     `;
+
+    ele.innerHTML = el;
+
+    parent.appendChild(ele);
 
 });
