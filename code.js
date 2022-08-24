@@ -121,12 +121,7 @@ function getRandomIntegerInRange(min, max) {
 }
 
 let participants = [
-    "benedikt",
-    "jungwirth",
-    "bello",
-    "sultanovic",
-    "arzt",
-    "hartl"
+    "wallner"
 ];
 
 document.querySelector('#angaben')
